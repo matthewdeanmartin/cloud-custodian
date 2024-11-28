@@ -17,6 +17,7 @@ class GraphQLApi(QueryResourceManager):
     class resource_type(TypeInfo):
         service = 'appsync'
         enum_spec = ('list_graphql_apis', 'graphqlApis', {'maxResults': 25})
+        detail_spec = ('get_graphql_api', 'apiId', 'apiId', None)
         id = 'apiId'
         name = 'name'
         config_type = cfn_type = 'AWS::AppSync::GraphQLApi'
