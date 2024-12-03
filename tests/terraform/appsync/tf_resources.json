@@ -1,0 +1,334 @@
+{
+    "pytest-terraform": 1,
+    "outputs": {},
+    "resources": {
+        "aws_appsync_graphql_api": {
+            "example0": {
+                "additional_authentication_provider": [
+                    {
+                        "authentication_type": "AWS_IAM",
+                        "lambda_authorizer_config": [],
+                        "openid_connect_config": [],
+                        "user_pool_config": []
+                    }
+                ],
+                "api_type": "GRAPHQL",
+                "arn": "arn:aws:appsync:us-east-1:644160558196:apis/l4hjdktvwvbebau45h2huvevqy",
+                "authentication_type": "API_KEY",
+                "enhanced_metrics_config": [],
+                "id": "l4hjdktvwvbebau45h2huvevqy",
+                "introspection_config": "ENABLED",
+                "lambda_authorizer_config": [],
+                "log_config": [],
+                "merged_api_execution_role_arn": "",
+                "name": "My AppSync App",
+                "openid_connect_config": [],
+                "query_depth_limit": 0,
+                "resolver_count_limit": 0,
+                "schema": null,
+                "tags": {
+                    "waf": "test"
+                },
+                "tags_all": {
+                    "waf": "test"
+                },
+                "uris": {
+                    "GRAPHQL": "https://vtib77ph7bdhdaynism73i23ky.appsync-api.us-east-1.amazonaws.com/graphql",
+                    "REALTIME": "wss://vtib77ph7bdhdaynism73i23ky.appsync-realtime-api.us-east-1.amazonaws.com/graphql"
+                },
+                "user_pool_config": [],
+                "visibility": "GLOBAL",
+                "xray_enabled": false
+            }
+        },
+        "aws_wafv2_web_acl": {
+            "example1": {
+                "application_integration_url": "",
+                "arn": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/FMManagedWebACLV2-FMS-TEST-1656966584517/7350303d-c6f9-4ece-bc82-055e8ef80cd8",
+                "association_config": [],
+                "capacity": 3,
+                "captcha_config": [],
+                "challenge_config": [],
+                "custom_response_body": [],
+                "default_action": [
+                    {
+                        "allow": [
+                            {
+                                "custom_request_handling": []
+                            }
+                        ],
+                        "block": []
+                    }
+                ],
+                "description": "Example of a Cloudfront rate based statement.",
+                "id": "7350303d-c6f9-4ece-bc82-055e8ef80cd8",
+                "lock_token": "37c950e8-d81b-4a9d-9123-46f9fb765fd9",
+                "name": "FMManagedWebACLV2-FMS-TEST-1656966584517",
+                "rule": [
+                    {
+                        "action": [
+                            {
+                                "allow": [],
+                                "block": [
+                                    {
+                                        "custom_response": []
+                                    }
+                                ],
+                                "captcha": [],
+                                "challenge": [],
+                                "count": []
+                            }
+                        ],
+                        "captcha_config": [],
+                        "name": "rule-1",
+                        "override_action": [],
+                        "priority": 1,
+                        "rule_label": [],
+                        "statement": [
+                            {
+                                "and_statement": [],
+                                "byte_match_statement": [],
+                                "geo_match_statement": [],
+                                "ip_set_reference_statement": [],
+                                "label_match_statement": [],
+                                "managed_rule_group_statement": [],
+                                "not_statement": [],
+                                "or_statement": [],
+                                "rate_based_statement": [
+                                    {
+                                        "aggregate_key_type": "IP",
+                                        "custom_key": [],
+                                        "evaluation_window_sec": 300,
+                                        "forwarded_ip_config": [],
+                                        "limit": 10000,
+                                        "scope_down_statement": [
+                                            {
+                                                "and_statement": [],
+                                                "byte_match_statement": [],
+                                                "geo_match_statement": [
+                                                    {
+                                                        "country_codes": [
+                                                            "US",
+                                                            "NL"
+                                                        ],
+                                                        "forwarded_ip_config": []
+                                                    }
+                                                ],
+                                                "ip_set_reference_statement": [],
+                                                "label_match_statement": [],
+                                                "not_statement": [],
+                                                "or_statement": [],
+                                                "regex_match_statement": [],
+                                                "regex_pattern_set_reference_statement": [],
+                                                "size_constraint_statement": [],
+                                                "sqli_match_statement": [],
+                                                "xss_match_statement": []
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "regex_match_statement": [],
+                                "regex_pattern_set_reference_statement": [],
+                                "rule_group_reference_statement": [],
+                                "size_constraint_statement": [],
+                                "sqli_match_statement": [],
+                                "xss_match_statement": []
+                            }
+                        ],
+                        "visibility_config": [
+                            {
+                                "cloudwatch_metrics_enabled": false,
+                                "metric_name": "friendly-rule-metric-name",
+                                "sampled_requests_enabled": false
+                            }
+                        ]
+                    }
+                ],
+                "rule_json": "",
+                "scope": "REGIONAL",
+                "tags": {
+                    "Tag1": "Value1",
+                    "Tag2": "Value2"
+                },
+                "tags_all": {
+                    "Tag1": "Value1",
+                    "Tag2": "Value2"
+                },
+                "token_domains": null,
+                "visibility_config": [
+                    {
+                        "cloudwatch_metrics_enabled": false,
+                        "metric_name": "friendly-metric-name",
+                        "sampled_requests_enabled": false
+                    }
+                ]
+            },
+            "example2": {
+                "application_integration_url": "",
+                "arn": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/WebACL_TESTv2/db20fade-2341-4673-b81d-2be7be4263ed",
+                "association_config": [],
+                "capacity": 701,
+                "captcha_config": [],
+                "challenge_config": [],
+                "custom_response_body": [],
+                "default_action": [
+                    {
+                        "allow": [
+                            {
+                                "custom_request_handling": []
+                            }
+                        ],
+                        "block": []
+                    }
+                ],
+                "description": "Example of a managed rule.",
+                "id": "db20fade-2341-4673-b81d-2be7be4263ed",
+                "lock_token": "6ca2f4b6-4717-4a9a-a777-6cc40fd93f57",
+                "name": "WebACL_TESTv2",
+                "rule": [
+                    {
+                        "action": [],
+                        "captcha_config": [],
+                        "name": "rule-1",
+                        "override_action": [
+                            {
+                                "count": [
+                                    {}
+                                ],
+                                "none": []
+                            }
+                        ],
+                        "priority": 1,
+                        "rule_label": [],
+                        "statement": [
+                            {
+                                "and_statement": [],
+                                "byte_match_statement": [],
+                                "geo_match_statement": [],
+                                "ip_set_reference_statement": [],
+                                "label_match_statement": [],
+                                "managed_rule_group_statement": [
+                                    {
+                                        "managed_rule_group_configs": [],
+                                        "name": "AWSManagedRulesCommonRuleSet",
+                                        "rule_action_override": [
+                                            {
+                                                "action_to_use": [
+                                                    {
+                                                        "allow": [],
+                                                        "block": [],
+                                                        "captcha": [],
+                                                        "challenge": [],
+                                                        "count": [
+                                                            {
+                                                                "custom_request_handling": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "name": "SizeRestrictions_QUERYSTRING"
+                                            },
+                                            {
+                                                "action_to_use": [
+                                                    {
+                                                        "allow": [],
+                                                        "block": [],
+                                                        "captcha": [],
+                                                        "challenge": [],
+                                                        "count": [
+                                                            {
+                                                                "custom_request_handling": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "name": "NoUserAgent_HEADER"
+                                            }
+                                        ],
+                                        "scope_down_statement": [
+                                            {
+                                                "and_statement": [],
+                                                "byte_match_statement": [],
+                                                "geo_match_statement": [
+                                                    {
+                                                        "country_codes": [
+                                                            "US",
+                                                            "NL"
+                                                        ],
+                                                        "forwarded_ip_config": []
+                                                    }
+                                                ],
+                                                "ip_set_reference_statement": [],
+                                                "label_match_statement": [],
+                                                "not_statement": [],
+                                                "or_statement": [],
+                                                "regex_match_statement": [],
+                                                "regex_pattern_set_reference_statement": [],
+                                                "size_constraint_statement": [],
+                                                "sqli_match_statement": [],
+                                                "xss_match_statement": []
+                                            }
+                                        ],
+                                        "vendor_name": "AWS",
+                                        "version": ""
+                                    }
+                                ],
+                                "not_statement": [],
+                                "or_statement": [],
+                                "rate_based_statement": [],
+                                "regex_match_statement": [],
+                                "regex_pattern_set_reference_statement": [],
+                                "rule_group_reference_statement": [],
+                                "size_constraint_statement": [],
+                                "sqli_match_statement": [],
+                                "xss_match_statement": []
+                            }
+                        ],
+                        "visibility_config": [
+                            {
+                                "cloudwatch_metrics_enabled": false,
+                                "metric_name": "friendly-rule-metric-name",
+                                "sampled_requests_enabled": false
+                            }
+                        ]
+                    }
+                ],
+                "rule_json": "",
+                "scope": "REGIONAL",
+                "tags": {
+                    "Tag1": "Value1",
+                    "Tag2": "Value2"
+                },
+                "tags_all": {
+                    "Tag1": "Value1",
+                    "Tag2": "Value2"
+                },
+                "token_domains": [
+                    "myotherwebsite.com",
+                    "mywebsite.com"
+                ],
+                "visibility_config": [
+                    {
+                        "cloudwatch_metrics_enabled": false,
+                        "metric_name": "friendly-metric-name",
+                        "sampled_requests_enabled": false
+                    }
+                ]
+            }
+        },
+        "aws_wafv2_web_acl_association": {
+            "example1_waf": {
+                "id": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/FMManagedWebACLV2-FMS-TEST-1656966584517/7350303d-c6f9-4ece-bc82-055e8ef80cd8,arn:aws:appsync:us-east-1:644160558196:apis/l4hjdktvwvbebau45h2huvevqy",
+                "resource_arn": "arn:aws:appsync:us-east-1:644160558196:apis/l4hjdktvwvbebau45h2huvevqy",
+                "timeouts": null,
+                "web_acl_arn": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/FMManagedWebACLV2-FMS-TEST-1656966584517/7350303d-c6f9-4ece-bc82-055e8ef80cd8"
+            },
+            "example2_waf": {
+                "id": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/WebACL_TESTv2/db20fade-2341-4673-b81d-2be7be4263ed,arn:aws:appsync:us-east-1:644160558196:apis/l4hjdktvwvbebau45h2huvevqy",
+                "resource_arn": "arn:aws:appsync:us-east-1:644160558196:apis/l4hjdktvwvbebau45h2huvevqy",
+                "timeouts": null,
+                "web_acl_arn": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/WebACL_TESTv2/db20fade-2341-4673-b81d-2be7be4263ed"
+            }
+        }
+    }
+}

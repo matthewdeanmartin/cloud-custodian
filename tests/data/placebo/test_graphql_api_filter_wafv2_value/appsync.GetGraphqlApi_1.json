@@ -1,0 +1,36 @@
+{
+    "status_code": 200,
+    "data": {
+        "ResponseMetadata": {},
+        "graphqlApi": {
+            "name": "My AppSync App",
+            "apiId": "foleuhdkcvcbhderjx4rjkrnea",
+            "authenticationType": "API_KEY",
+            "arn": "arn:aws:appsync:us-east-1:644160558196:apis/foleuhdkcvcbhderjx4rjkrnea",
+            "uris": {
+                "REALTIME": "wss://fbowk4venjfldjthqwlghql7r4.appsync-realtime-api.us-east-1.amazonaws.com/graphql",
+                "GRAPHQL": "https://fbowk4venjfldjthqwlghql7r4.appsync-api.us-east-1.amazonaws.com/graphql"
+            },
+            "tags": {
+                "waf": "test"
+            },
+            "additionalAuthenticationProviders": [
+                {
+                    "authenticationType": "AWS_IAM"
+                }
+            ],
+            "xrayEnabled": false,
+            "wafWebAclArn": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/FMManagedWebACLV2-FMS-TEST-1656966584517/22231d6c-f553-42b1-8fc4-642719a8a052",
+            "dns": {
+                "REALTIME": "fbowk4venjfldjthqwlghql7r4.appsync-realtime-api.us-east-1.amazonaws.com",
+                "GRAPHQL": "fbowk4venjfldjthqwlghql7r4.appsync-api.us-east-1.amazonaws.com"
+            },
+            "visibility": "GLOBAL",
+            "apiType": "GRAPHQL",
+            "owner": "644160558196",
+            "introspectionConfig": "ENABLED",
+            "queryDepthLimit": 0,
+            "resolverCountLimit": 0
+        }
+    }
+}

@@ -1,14 +1,11 @@
 {
-    "status_code": 200,
+    "status_code": 404,
     "data": {
+        "Error": {
+            "Message": "Unable to get the cache as it doesn't exist, please create the cache first.",
+            "Code": "NotFoundException"
+        },
         "ResponseMetadata": {},
-        "apiCache": {
-            "ttl": 60,
-            "apiCachingBehavior": "FULL_REQUEST_CACHING",
-            "transitEncryptionEnabled": false,
-            "atRestEncryptionEnabled": false,
-            "type": "SMALL",
-            "status": "AVAILABLE"
-        }
+        "message": "Unable to get the cache as it doesn't exist, please create the cache first."
     }
 }

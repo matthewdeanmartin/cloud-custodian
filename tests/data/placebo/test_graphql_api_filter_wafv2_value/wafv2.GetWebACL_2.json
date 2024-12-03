@@ -1,0 +1,70 @@
+{
+    "status_code": 200,
+    "data": {
+        "WebACL": {
+            "Name": "WebACL_TESTv2",
+            "Id": "c51ccea1-a643-43b5-b137-eda2013243ef",
+            "ARN": "arn:aws:wafv2:us-east-1:644160558196:regional/webacl/WebACL_TESTv2/c51ccea1-a643-43b5-b137-eda2013243ef",
+            "DefaultAction": {
+                "Allow": {}
+            },
+            "Description": "Example of a managed rule.",
+            "Rules": [
+                {
+                    "Name": "rule-1",
+                    "Priority": 1,
+                    "Statement": {
+                        "ManagedRuleGroupStatement": {
+                            "VendorName": "AWS",
+                            "Name": "AWSManagedRulesCommonRuleSet",
+                            "ScopeDownStatement": {
+                                "GeoMatchStatement": {
+                                    "CountryCodes": [
+                                        "US",
+                                        "NL"
+                                    ]
+                                }
+                            },
+                            "RuleActionOverrides": [
+                                {
+                                    "Name": "SizeRestrictions_QUERYSTRING",
+                                    "ActionToUse": {
+                                        "Count": {}
+                                    }
+                                },
+                                {
+                                    "Name": "NoUserAgent_HEADER",
+                                    "ActionToUse": {
+                                        "Count": {}
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "OverrideAction": {
+                        "Count": {}
+                    },
+                    "VisibilityConfig": {
+                        "SampledRequestsEnabled": false,
+                        "CloudWatchMetricsEnabled": false,
+                        "MetricName": "friendly-rule-metric-name"
+                    }
+                }
+            ],
+            "VisibilityConfig": {
+                "SampledRequestsEnabled": false,
+                "CloudWatchMetricsEnabled": false,
+                "MetricName": "friendly-metric-name"
+            },
+            "Capacity": 701,
+            "ManagedByFirewallManager": false,
+            "LabelNamespace": "awswaf:644160558196:webacl:WebACL_TESTv2:",
+            "TokenDomains": [
+                "mywebsite.com",
+                "myotherwebsite.com"
+            ]
+        },
+        "LockToken": "abb52f00-172c-444f-b167-ade30774ad1e",
+        "ResponseMetadata": {}
+    }
+}

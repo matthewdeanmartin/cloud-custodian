@@ -1,0 +1,25 @@
+{
+    "status_code": 200,
+    "data": {
+        "ResponseMetadata": {},
+        "graphqlApi": {
+            "name": "My AppSync App",
+            "apiId": "244f2141-848d-485b-8676-dadb244fc120",
+            "authenticationType": "API_KEY",
+            "arn": "arn:aws:appsync:us-east-1:644160558196:apis/244f2141-848d-485b-8676-dadb244fc120",
+            "uris": {
+                "GRAPHQL": "http://graphql.uri"
+            },
+            "tags": {
+                "waf": "test"
+            },
+            "additionalAuthenticationProviders": [
+                {
+                    "authenticationType": "AWS_IAM"
+                }
+            ],
+            "xrayEnabled": false,
+            "visibility": "GLOBAL"
+        }
+    }
+}

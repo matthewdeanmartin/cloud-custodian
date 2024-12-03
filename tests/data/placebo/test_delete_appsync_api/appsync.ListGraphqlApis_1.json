@@ -5,15 +5,19 @@
         "graphqlApis": [
             {
                 "name": "My AppSync App",
-                "apiId": "5n6gf6os2nbixi3mew55oklvrq",
+                "apiId": "5f032f3a-070c-401d-8f4b-4aa96c3997f9",
                 "authenticationType": "API_KEY",
-                "arn": "arn:aws:appsync:us-east-1:644160558196:apis/5n6gf6os2nbixi3mew55oklvrq",
+                "arn": "arn:aws:appsync:us-east-1:644160558196:apis/5f032f3a-070c-401d-8f4b-4aa96c3997f9",
                 "uris": {
-                    "REALTIME": "wss://ijuwrzlwrbfhrgrglmi7skivnq.appsync-realtime-api.us-east-1.amazonaws.com/graphql",
-                    "GRAPHQL": "https://ijuwrzlwrbfhrgrglmi7skivnq.appsync-api.us-east-1.amazonaws.com/graphql"
+                    "GRAPHQL": "http://graphql.uri"
                 },
-                "tags": {},
-                "xrayEnabled": false
+                "additionalAuthenticationProviders": [
+                    {
+                        "authenticationType": "AWS_IAM"
+                    }
+                ],
+                "xrayEnabled": false,
+                "visibility": "GLOBAL"
             }
         ]
     }
